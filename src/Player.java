@@ -69,12 +69,12 @@ public class Player {
                     hand.get(0).getRank().cardValue == 2 &&
                             hand.get(1).getRank().cardValue == 3 &&
                             hand.get(2).getRank().cardValue == 4 &&
-                            hand.get(4).getRank().cardValue == 5;
+                            hand.get(3).getRank().cardValue == 5;
             boolean conditionB =
                     hand.get(0).getRank().cardValue == 10 &&
                             hand.get(1).getRank().cardValue == 11 &&
                             hand.get(2).getRank().cardValue == 12 &&
-                            hand.get(4).getRank().cardValue == 13;
+                            hand.get(3).getRank().cardValue == 13;
             return (conditionA || conditionB);
         } else if (hand.size() == 5) {
             // check if cardvalues are consecutive
