@@ -1,10 +1,13 @@
 import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Class Player instantiated to hold cards dealt to players
+ * Contains class methods to check for winning hands
+ *
+ * */
 public class Player {
 
     private List<Card> hand = new ArrayList<>();

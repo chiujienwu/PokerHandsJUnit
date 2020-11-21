@@ -3,6 +3,13 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 import java.util.stream.Stream;
 
+/**
+ * This is the Main Class containing the main method for the Poker Hand JUnit testing.
+ * Uses Player Class to generate a player list to contain card hands.
+ * Currently program only support 5 card hands.
+ *
+ * @author Jerry Chiu
+ */
 public class MainGame {
 
     public enum Suit {
@@ -27,7 +34,7 @@ public class MainGame {
         KING(13),
         ACE(14);
 
-        // https://www.baeldung.com/java-enum-values
+// https://www.baeldung.com/java-enum-values
 //        private static final Map<Integer, Rank> BY_CARD_VALUE = new HashMap<>();
 //
 //        static {
@@ -39,6 +46,10 @@ public class MainGame {
         public final int cardValue;
 
         // constructor
+
+        /**
+         * @param cardValue, the integer value equivalent to card description
+         */
         private Rank(int cardValue) {
             this.cardValue = cardValue;
         }
@@ -47,7 +58,10 @@ public class MainGame {
 //            return Arrays.stream(Rank.values());
 //        }
 
-        protected int getCardValue(){
+        /**
+         * @return cardValue, the integer value equivalent to card description
+         */
+        protected int getCardValue() {
             return cardValue;
         }
     }
@@ -133,7 +147,7 @@ public class MainGame {
 //        });
 
         for (int p = 0; p < playerList.size(); p++) {
-            System.out.println("Player " + (p+1) + playerList.get(p).getHand());
+            System.out.println("Player " + (p + 1) + playerList.get(p).getHand());
             System.out.println(playerList.get(p).isRoyalFlush(playerList.get(p).getHand()));
             System.out.println(playerList.get(p).isStraightFlush(playerList.get(p).getHand()));
             System.out.println(playerList.get(p).isFourOfAKind(playerList.get(p).getHand()));
@@ -156,7 +170,4 @@ public class MainGame {
 //            .forEach(System.out::println);
 
     }
-
-
 }
-
